@@ -90,7 +90,7 @@ body {
   text-align: var(--bs-body-text-align);
   background-color: var(--bs-body-bg);
   -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: rgba(44, 188, 202, 0);
+  -webkit-tap-highlight-color: rgba(0, 0, 0);
 }
 
 hr {
@@ -132,6 +132,7 @@ h2, .h2 {
 
 h3, .h3 {
   font-size: calc(1.3rem + 0.6vw);
+  color: #51307f;
 }
 @media (min-width: 1200px) {
   h3, .h3 {
@@ -159,6 +160,7 @@ h6, .h6 {
 p {
   margin-top: 0;
   margin-bottom: 1rem;
+  color: #2cbcca;
 }
 
 abbr[title],
@@ -3033,8 +3035,8 @@ textarea.form-control-lg {
 }
 
 .btn-primary {
-  color: #2cbcca;
-  background-color: #51307f;
+  color: #51307f;
+  background-color: #2cbcca;
   border-color: #64a19d;
 }
 .btn-primary:hover {
@@ -4627,7 +4629,7 @@ textarea.form-control-lg {
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: #fff;
+  background-color: #000000;
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
@@ -7465,6 +7467,7 @@ textarea.form-control-lg {
 .my-4 {
   margin-top: 1.5rem !important;
   margin-bottom: 1.5rem !important;
+  color: #2cbcca;
 }
 
 .my-5 {
@@ -7535,6 +7538,7 @@ textarea.form-control-lg {
 
 .mb-0 {
   margin-bottom: 0 !important;
+  color: #2cbcca;
 }
 
 .mb-1 {
@@ -7551,6 +7555,10 @@ textarea.form-control-lg {
 
 .mb-4 {
   margin-bottom: 1.5rem !important;
+}
+
+.teammemeber-text{
+    color: red
 }
 
 .mb-5 {
@@ -7954,12 +7962,12 @@ textarea.form-control-lg {
 
 .text-black-50 {
   --bs-text-opacity: 1;
-  color: rgba(0, 0, 0, 0.5) !important;
+  color: rgba(44, 188, 202) !important;
 }
 
 .text-white-50 {
   --bs-text-opacity: 1;
-  color: rgba(44, 188, 202, 0.5) !important;
+  color: rgba(44, 188, 202) !important;
 }
 
 .text-reset {
@@ -7985,7 +7993,7 @@ textarea.form-control-lg {
 
 .bg-primary {
   --bs-bg-opacity: 1;
-  background-color: rgba(81, 48, 127) !important;
+  background-color: rgba(0 0 0) !important;
 }
 
 .bg-secondary {
@@ -8025,7 +8033,7 @@ textarea.form-control-lg {
 
 .bg-black {
   --bs-bg-opacity: 1;
-  background-color: rgba(81, 48, 127) !important;
+  background-color: rgba(0, 0, 0) !important;
 }
 
 .bg-white {
@@ -11509,12 +11517,12 @@ body {
   }
   #mainNav .navbar-brand {
     padding: 0.5rem 0;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(0, 0, 0);
   }
   #mainNav .nav-link {
     transition: none;
     padding: 2rem 1.5rem;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(0, 0, 0);
   }
   #mainNav .nav-link:hover {
     color: rgba(255, 255, 255, 0.75);
@@ -11573,7 +11581,7 @@ body {
   font-size: 2.5rem;
   line-height: 2.5rem;
   letter-spacing: 0.8rem;
-  background: linear-gradient(rgba(44, 188, 202, 100), rgba(44, 188, 202, .1));
+  background: linear-gradient(rgba(44, 188, 202, 100), rgba(44, 188, 202, .25));
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
           background-clip: text;
@@ -11697,4 +11705,70 @@ body {
 
 .footer {
   padding: 5rem 0;
+}
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+.container {
+  position: relative;
+  width:110%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #008CBA;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.container:hover .overlay {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
